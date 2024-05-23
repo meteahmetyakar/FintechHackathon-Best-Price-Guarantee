@@ -15,8 +15,4 @@ public class PriceHistoryService {
 	public PriceHistory savePriceHistory(PriceHistory priceHistory) {
 		return priceHistoryRepository.save(priceHistory);
 	}
-
-	public List<PriceHistory> getPriceHistoryByFlightId(Long flightId) {
-		return priceHistoryRepository.findByFlightFlightIdOrderByUpdateDateDesc(flightId);
-	}
 }

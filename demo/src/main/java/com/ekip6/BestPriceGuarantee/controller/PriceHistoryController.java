@@ -19,9 +19,5 @@ public class PriceHistoryController {
 		return ResponseEntity.ok(priceHistoryService.savePriceHistory(priceHistory));
 	}
 
-	@GetMapping("/{flightId}")
-	public ResponseEntity<List<PriceHistory>> getPriceHistoryByFlightId(@PathVariable Long flightId) {
-		return ResponseEntity.ok(priceHistoryService.getPriceHistoryByFlightId(flightId));
-	}
 }
 

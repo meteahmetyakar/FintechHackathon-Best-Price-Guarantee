@@ -22,35 +22,25 @@ public class Flight {
 		this.departureTime = departureTime;
 	}
 
-	// Getters and Setters
+	// Getters
 	public Long getFlightId() {
 		return flightId;
-	}
-
-	public void setFlightId(Long flightId) {
-		this.flightId = flightId;
 	}
 
 	public String getOrigin() {
 		return origin;
 	}
 
-	public void setOrigin(String origin) {
-		this.origin = origin;
-	}
-
 	public String getDestination() {
 		return destination;
-	}
-
-	public void setDestination(String destination) {
-		this.destination = destination;
 	}
 
 	public LocalDateTime getDepartureTime() {
 		return departureTime;
 	}
 
+
+	//Setters
 	public void setDepartureTime(LocalDateTime departureTime) {
 		this.departureTime = departureTime;
 	}

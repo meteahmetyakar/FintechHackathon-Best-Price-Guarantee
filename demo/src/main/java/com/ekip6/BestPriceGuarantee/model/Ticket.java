@@ -20,6 +20,7 @@ public class Ticket {
 	private BigDecimal price;
 	private LocalDateTime purchaseDate;
 
+	// Constructors
 	public Ticket() {}
 
 	public Ticket(Long ticketId, Flight flight, String passengerName, String seatNumber, BigDecimal price, LocalDateTime purchaseDate) {
@@ -57,14 +58,6 @@ public class Ticket {
 	}
 
 	// Setters
-	public void setTicketId(Long ticketId) {
-		this.ticketId = ticketId;
-	}
-
-	public void setFlight(Flight flight) {
-		this.flight = flight;
-	}
-
 	public void setPassengerName(String passengerName) {
 		this.passengerName = passengerName;
 	}
@@ -73,11 +66,4 @@ public class Ticket {
 		this.seatNumber = seatNumber;
 	}
 
-	public void setPrice(BigDecimal price) {
-		this.price = price;
-	}
-
-	public void setPurchaseDate(LocalDateTime purchaseDate) {
-		this.purchaseDate = purchaseDate;
-	}
 }
