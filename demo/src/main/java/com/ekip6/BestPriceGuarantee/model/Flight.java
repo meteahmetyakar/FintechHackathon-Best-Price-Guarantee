@@ -12,5 +12,46 @@ public class Flight {
 	private String destination;
 	private LocalDateTime departureTime;
 
+	// Constructors
+	public Flight() {}
+
+	public Flight(Long flightId, String origin, String destination, LocalDateTime departureTime) {
+		this.flightId = flightId;
+		this.origin = origin;
+		this.destination = destination;
+		this.departureTime = departureTime;
+	}
+
 	// Getters and Setters
+	public Long getFlightId() {
+		return flightId;
+	}
+
+	public void setFlightId(Long flightId) {
+		this.flightId = flightId;
+	}
+
+	public String getOrigin() {
+		return origin;
+	}
+
+	public void setOrigin(String origin) {
+		this.origin = origin;
+	}
+
+	public String getDestination() {
+		return destination;
+	}
+
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
+
+	public LocalDateTime getDepartureTime() {
+		return departureTime;
+	}
+
+	public void setDepartureTime(LocalDateTime departureTime) {
+		this.departureTime = departureTime;
+	}
 }
