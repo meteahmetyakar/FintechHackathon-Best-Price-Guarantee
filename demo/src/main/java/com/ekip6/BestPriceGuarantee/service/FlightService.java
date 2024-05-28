@@ -1,5 +1,7 @@
 package com.ekip6.BestPriceGuarantee.service;
 
+import com.ekip6.BestPriceGuarantee.dto.FlightDTO;
+import com.ekip6.BestPriceGuarantee.mapper.FlightMapper;
 import com.ekip6.BestPriceGuarantee.model.Flight;
 import com.ekip6.BestPriceGuarantee.repository.FlightRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +12,10 @@ public class FlightService {
 	@Autowired
 	private FlightRepository flightRepository;
 
-	public Flight saveFlight(Flight flight) {
-		return flightRepository.save(flight);
+	public FlightDTO saveFlight(FlightDTO flightDTO) {
+		Flight flight = FlightMapper.INSTANCE.flightDTOToFlight(flightDTO);
+		flight = flightRepository.save(flight);
+		return FlightMapper.INSTANCE.flightToFlightDTO(flight);
 	}
+
 }

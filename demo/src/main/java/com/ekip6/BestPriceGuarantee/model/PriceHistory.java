@@ -20,8 +20,7 @@ public class PriceHistory {
 	// Constructors
 	public PriceHistory() {}
 
-	public PriceHistory(Long priceId, Flight flight, BigDecimal price, LocalDateTime updateDate) {
-		this.priceId = priceId;
+	public PriceHistory(Flight flight, BigDecimal price, LocalDateTime updateDate) {
 		this.flight = flight;
 		this.price = price;
 		this.updateDate = updateDate;

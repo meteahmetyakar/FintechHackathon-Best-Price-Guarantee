@@ -1,45 +1,42 @@
-package com.ekip6.BestPriceGuarantee.model;
+package com.ekip6.BestPriceGuarantee.dto;
 
-import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
-@Entity
-public class Flight {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+public class FlightDTO {
 	private Long flightId;
 	private String origin;
 	private String destination;
 	private LocalDateTime departureTime;
 
-	// Constructors
-	public Flight() {}
-
-	public Flight(String origin, String destination, LocalDateTime departureTime) {
-		this.origin = origin;
-		this.destination = destination;
-		this.departureTime = departureTime;
-	}
-
-	// Getters
+	// Getters and Setters
 	public Long getFlightId() {
 		return flightId;
+	}
+
+	public void setFlightId(Long flightId) {
+		this.flightId = flightId;
 	}
 
 	public String getOrigin() {
 		return origin;
 	}
 
+	public void setOrigin(String origin) {
+		this.origin = origin;
+	}
+
 	public String getDestination() {
 		return destination;
+	}
+
+	public void setDestination(String destination) {
+		this.destination = destination;
 	}
 
 	public LocalDateTime getDepartureTime() {
 		return departureTime;
 	}
 
-
-	//Setters
 	public void setDepartureTime(LocalDateTime departureTime) {
 		this.departureTime = departureTime;
 	}

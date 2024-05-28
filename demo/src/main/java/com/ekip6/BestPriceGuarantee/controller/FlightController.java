@@ -1,5 +1,6 @@
 package com.ekip6.BestPriceGuarantee.controller;
 
+import com.ekip6.BestPriceGuarantee.dto.FlightDTO;
 import com.ekip6.BestPriceGuarantee.model.Flight;
 import com.ekip6.BestPriceGuarantee.service.FlightService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,8 @@ public class FlightController {
 	private FlightService flightService;
 
 	@PostMapping
-	public ResponseEntity<Flight> createFlight(@RequestBody Flight flight) {
-		return ResponseEntity.ok(flightService.saveFlight(flight));
+	public ResponseEntity<FlightDTO> createFlight(@RequestBody FlightDTO flightDTO) {
+		FlightDTO savedFlight = flightService.saveFlight(flightDTO);
+		return ResponseEntity.ok(savedFlight);
 	}
 }

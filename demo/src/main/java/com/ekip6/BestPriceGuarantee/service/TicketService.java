@@ -1,5 +1,7 @@
 package com.ekip6.BestPriceGuarantee.service;
 
+import com.ekip6.BestPriceGuarantee.dto.TicketDTO;
+import com.ekip6.BestPriceGuarantee.mapper.TicketMapper;
 import com.ekip6.BestPriceGuarantee.model.Ticket;
 import com.ekip6.BestPriceGuarantee.repository.TicketRepository;
 import com.ekip6.BestPriceGuarantee.repository.PriceHistoryRepository;
@@ -16,16 +18,10 @@ public class TicketService {
 	@Autowired
 	private PriceHistoryRepository priceHistoryRepository;
 
-	public BigDecimal calculateRefundAmount(Long flightId, Long ticketId) {
-		Optional<Ticket> ticketOpt = ticketRepository.findById(ticketId);
-		if (ticketOpt.isPresent()) {
-			Ticket ticket = ticketOpt.get();
-			if (ticket.getFlight().getFlightId().equals(flightId)) {
-				BigDecimal lowestPrice = priceHistoryRepository.findLowestPriceBetweenDates(
-						flightId, ticket.getFlight().getDepartureTime(), ticket.getPurchaseDate());
-				return ticket.getPrice().subtract(lowestPrice);
-			}
-		}
-		return BigDecimal.ZERO;
+	public TicketDTO saveTicket(TicketDTO ticketDTO) {
+		Ticket ticket = TicketMapper.INSTANCE.ticketDTOToTicket(ticketDTO);
+		ticket = ticketRepository.save(ticket);
+		return TicketMapper.INSTANCE.ticketToTicketDTO(ticket);
 	}
+
 }

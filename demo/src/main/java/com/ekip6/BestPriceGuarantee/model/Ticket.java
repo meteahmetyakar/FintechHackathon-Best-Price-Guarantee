@@ -23,8 +23,7 @@ public class Ticket {
 	// Constructors
 	public Ticket() {}
 
-	public Ticket(Long ticketId, Flight flight, String passengerName, String seatNumber, BigDecimal price, LocalDateTime purchaseDate) {
-		this.ticketId = ticketId;
+	public Ticket(Flight flight, String passengerName, String seatNumber, BigDecimal price, LocalDateTime purchaseDate) {
 		this.flight = flight;
 		this.passengerName = passengerName;
 		this.seatNumber = seatNumber;
