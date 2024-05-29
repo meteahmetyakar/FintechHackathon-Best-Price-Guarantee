@@ -1,7 +1,7 @@
 package com.ekip6.BestPriceGuarantee.model;
 
-import jakarta.persistence.*;
 
+import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 @Entity

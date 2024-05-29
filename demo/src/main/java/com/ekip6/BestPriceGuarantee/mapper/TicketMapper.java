@@ -10,9 +10,7 @@ import org.mapstruct.factory.Mappers;
 public interface TicketMapper {
 	TicketMapper INSTANCE = Mappers.getMapper(TicketMapper.class);
 
-	@Mapping(source = "flight.flightId", target = "flightId")
 	TicketDTO ticketToTicketDTO(Ticket ticket);
 
-	@Mapping(source = "flightId", target = "flight.flightId")
 	Ticket ticketDTOToTicket(TicketDTO ticketDTO);
 }
