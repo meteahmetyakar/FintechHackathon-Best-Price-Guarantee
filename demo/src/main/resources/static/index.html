@@ -8,8 +8,21 @@
     <script>
         $(document).ready(function() {
             $("#triggerEventButton").click(function() {
-                $.post("/trigger-event", { flightId: "1234" }, function(data) {
-                    $("#result").text("Event dinlendi: " + data.message);
+                var event = {
+                    flightId: "1234",
+                };
+
+                $.ajax({
+                    url: "/trigger-event",
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(event),
+                    success: function(data) {
+                        $("#result").text("Event dinlendi: " + data);
+                    },
+                    error: function(xhr, status, error) {
+                        $("#result").text("Error: " + xhr.responseText);
+                    }
                 });
             });
         });

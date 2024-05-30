@@ -6,7 +6,7 @@ import com.ekip6.BestPriceGuarantee.producer.FlightStatusProducer;
 import java.time.LocalDateTime;
 
 public class FlightStatusService {
-    private FlightStatusProducer producer;
+   /* private FlightStatusProducer producer;
 
     public FlightStatusService() {
         this.producer = new FlightStatusProducer();
@@ -19,5 +19,5 @@ public class FlightStatusService {
             FlightCompletedEvent event = new FlightCompletedEvent(flightId);
             producer.sendFlightCompletedEvent(event);
         }
-    }
+    }*/
 }

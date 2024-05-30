@@ -21,6 +21,7 @@ public class RefundProcessingService {
     private PriceHistoryRepository priceHistoryRepository;
 
     public void processRefundForCompletedFlight(Long flightId) {
+        System.out.println("İADE GERÇEKLEŞTİ");
         List<Ticket> tickets = ticketRepository.findByFlightFlightId(flightId);
         for (Ticket ticket : tickets) {
             BigDecimal refundAmount = calculateRefundAmount(ticket);

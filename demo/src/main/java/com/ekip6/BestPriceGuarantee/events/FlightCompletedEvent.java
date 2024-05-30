@@ -1,9 +1,13 @@
 package com.ekip6.BestPriceGuarantee.events;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class FlightCompletedEvent {
     private Long flightId;
 
-    public FlightCompletedEvent(Long flightId) {
+    @JsonCreator
+    public FlightCompletedEvent(@JsonProperty("flightId") Long flightId) {
         this.flightId = flightId;
     }
 

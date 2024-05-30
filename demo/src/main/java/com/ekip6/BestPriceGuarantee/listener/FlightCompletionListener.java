@@ -13,10 +13,10 @@ public class FlightCompletionListener {
     private RefundProcessingService refundProcessingService;
 
     @KafkaListener(topics = "flightCompletedEvents", groupId = "flight-group")
-    public void onFlightCompleted(FlightCompletedEvent event) {
+    public String onFlightCompleted(FlightCompletedEvent event) {
         refundProcessingService.processRefundForCompletedFlight(event.getFlightId());
         System.out.println("Flight Completed Event received: " + event.getFlightId());
-
+        return "Flight Completed Event received: " + event.getFlightId();
     }
 }
 

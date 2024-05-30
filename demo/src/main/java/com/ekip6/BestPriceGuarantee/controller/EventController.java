@@ -10,11 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class EventController {
 
-    @Autowired
-    private FlightStatusProducer flightStatusProducer;
+    private final FlightStatusProducer flightStatusProducer;
+
+    public EventController(FlightStatusProducer flightStatusProducer) {
+        this.flightStatusProducer = flightStatusProducer;
+    }
 
     @PostMapping("/trigger-event")
     public String triggerEvent(@RequestBody FlightCompletedEvent event) {
+        System.out.println("converted : " + event.getFlightId());
         flightStatusProducer.sendFlightCompletedEvent(event);
         return "Event triggered successfully!";
     }
