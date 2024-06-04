@@ -17,7 +17,7 @@ and to deposit the fee between the price paid after the flight and the cheapest 
 ## Flight Completion and Refund Processing Flow
 > In this diagram, I tried to explain how the system works and what the process is from the moment a flight takes place to the refund process.
 
-###### ***Due to limited time and since it is a project developed for presentation purposes, situations such as exception handling, authentication and encryption are not addressed.***
+###### ***Due to limited time and since it is a project developed for presentation purposes, situations such as exception handling, authentication and encryption are not addressed in the diagram.***
 
 <p align="center"> 
   <a href="#">
