@@ -21,7 +21,7 @@ and to deposit the fee between the price paid after the flight and the cheapest 
 
 <p align="center"> 
   <a href="#">
-    <img src="https://github.com/meteahmetyakar/FintechHackathon-Best-Price-Guarantee/blob/main/images/diagram.jpg"/>
+    <img src="https://github.com/meteahmetyakar/FintechHackathon-Best-Price-Guarantee/blob/main/images/flowdiagram.jpg"/>
     <br></br>
   </a>
 </p>  
