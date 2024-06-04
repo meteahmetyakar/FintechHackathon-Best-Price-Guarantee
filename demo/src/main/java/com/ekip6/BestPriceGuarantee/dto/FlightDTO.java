@@ -41,3 +41,4 @@ public class FlightDTO {
 		this.departureTime = departureTime;
 	}
 }
+

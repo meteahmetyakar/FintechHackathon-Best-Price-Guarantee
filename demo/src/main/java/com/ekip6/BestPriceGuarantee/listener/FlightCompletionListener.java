@@ -15,8 +15,8 @@ public class FlightCompletionListener {
     @KafkaListener(topics = "flightCompletedEvents", groupId = "flight-group")
     public String onFlightCompleted(FlightCompletedEvent event) {
         refundProcessingService.processRefundForCompletedFlight(event.getFlightId());
-        System.out.println("Flight Completed Event received: " + event.getFlightId());
         return "Flight Completed Event received: " + event.getFlightId();
     }
+
 }
 

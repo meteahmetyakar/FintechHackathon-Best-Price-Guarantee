@@ -60,3 +60,4 @@ public class TicketDTO {
 		this.purchaseDate = purchaseDate;
 	}
 }
+

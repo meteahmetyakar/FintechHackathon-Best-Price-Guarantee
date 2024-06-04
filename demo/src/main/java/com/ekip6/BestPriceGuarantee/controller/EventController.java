@@ -18,7 +18,6 @@ public class EventController {
 
     @PostMapping("/trigger-event")
     public String triggerEvent(@RequestBody FlightCompletedEvent event) {
-        System.out.println("converted : " + event.getFlightId());
         flightStatusProducer.sendFlightCompletedEvent(event);
         return "Event triggered successfully!";
     }

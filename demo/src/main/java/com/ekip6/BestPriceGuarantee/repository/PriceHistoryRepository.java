@@ -12,3 +12,4 @@ public interface PriceHistoryRepository extends JpaRepository<PriceHistory, Long
 	@Query("SELECT MIN(p.price) FROM PriceHistory p WHERE p.flight.flightId = :flightId AND p.updateDate BETWEEN :start AND :end")
 	BigDecimal findLowestPriceBetweenDates(Long flightId, LocalDateTime start, LocalDateTime end);
 }
+

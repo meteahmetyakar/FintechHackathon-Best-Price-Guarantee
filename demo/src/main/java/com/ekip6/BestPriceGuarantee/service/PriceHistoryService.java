@@ -20,3 +20,4 @@ public class PriceHistoryService {
 		return PriceHistoryMapper.INSTANCE.priceHistoryToPriceHistoryDTO(priceHistory);
 	}
 }
+

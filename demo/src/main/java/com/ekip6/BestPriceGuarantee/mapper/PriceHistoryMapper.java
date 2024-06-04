@@ -12,3 +12,4 @@ public interface PriceHistoryMapper {
 	PriceHistoryDTO priceHistoryToPriceHistoryDTO(PriceHistory priceHistory);
 	PriceHistory priceHistoryDTOToPriceHistory(PriceHistoryDTO priceHistoryDTO);
 }
+

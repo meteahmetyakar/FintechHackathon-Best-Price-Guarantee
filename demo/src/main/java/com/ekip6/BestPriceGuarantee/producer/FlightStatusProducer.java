@@ -15,7 +15,7 @@ public class FlightStatusProducer {
         this.kafkaTemplate = kafkaTemplate;
     }
     public void sendFlightCompletedEvent(FlightCompletedEvent event) {
-        System.out.println("Sending " + event.getFlightId() + " to kafka");
         kafkaTemplate.send("flightCompletedEvents", event);
     }
 }
+

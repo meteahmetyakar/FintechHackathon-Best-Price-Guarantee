@@ -42,3 +42,4 @@ public class PriceHistoryDTO {
 		this.updateDate = updateDate;
 	}
 }
+
