@@ -1,7 +1,7 @@
 ## Project Objective: A Brief Overview
 This project has been developed as an incentive program aimed at increasing the usage of TK Wallet, a new product by Turkish Airlines. 
-Our goal is to guarantee that the customer will receive the cheapest ticket price from the date of purchase of a ticket purchased with TK Wallet until the flight time,
-and to deposit the fee between the price paid after the flight and the cheapest price as wallet money into the customer's TK Wallet account.
+Our goal is to guarantee that the customer will receive the cheapest ticket price from the date of purchase of a ticket purchased with TK Wallet until the flight time.
+After the flight takes place, the difference between the price paid for the ticket and the cheapest price between the date of purchase of the ticket and the flight date is refunded to the customer.
 
 ## Prototype
 > In this figma prototype, I tried to simulate a customer purchasing a ticket via the Turkish Airlines application with TK Wallet.
